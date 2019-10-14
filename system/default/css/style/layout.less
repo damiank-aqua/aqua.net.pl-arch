@@ -1,6 +1,41 @@
+.container, .container-fluid{
+  position: relative;
+}
+.im-top{
+  ul{
+    margin: 0;
+    padding: 0;
+    li{
+      list-style-type: none;
+      display: inline;
+      img{
+        height: 30px;
+      }
+      a{
+        color: @secondary;
+      }
+    }
+  }
+}
 .im-logo{
   text-align: center;
   padding: 5px;
+}
+.im-menu{
+  .linear-gradient-up();
+  .nav-link{
+    color: @white !important;
+    i.fal{
+      font-size: 17px;
+    }
+  }
+}
+.im-gradient-down {
+  .linear-gradient-down();
+  color: @white;
+}
+.im-menu, .im-gradient-down {
+  min-height: 90px;
 }
 .im-footer{
   background-color: @black;
@@ -25,9 +60,8 @@
   }
 }
 .object{
-  padding: 10px;
-  background-color: @light-gray;
-  border: 1px solid @white;
+  padding: 0;
+  margin: 0;
   img{
     width: 100%;
   }
@@ -36,4 +70,9 @@
       font-size: 40px;
     }
   }
+}
+.slider-icon{
+  position: absolute;
+  top: 20px;
+  width: 100px;
 }

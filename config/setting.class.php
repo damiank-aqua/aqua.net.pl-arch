@@ -8,4 +8,5 @@ class Setting
         'dir' => array('css', 'js'),
         'file' => array('content.php', 'css/main.css', 'setting.php')//Full path
     );
+
 }

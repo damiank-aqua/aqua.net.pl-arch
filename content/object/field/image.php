@@ -22,9 +22,10 @@ if($this->checkDataDisplay($dataDisplay, 'array')) {
         echo '<div class="carousel-inner">';
 
         $active = ' active';
+
         foreach ($dataDisplay as $img) {
 
-            if($img['link'] == '') {
+            if($img['link'] == 0) {
 
                 $href = $img['url'];
 
