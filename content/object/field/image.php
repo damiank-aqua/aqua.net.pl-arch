@@ -22,28 +22,32 @@ if($this->checkDataDisplay($dataDisplay, 'array')) {
         echo '<div class="carousel-inner">';
 
         $active = ' active';
-
         foreach ($dataDisplay as $img) {
 
-            if($img['link'] == 0) {
+            if($img['section'] > 0) {
 
-                $href = $img['url'];
+                $dataRel = '';
+
+                $href = $this->getSectionUrl($img['section']);
 
             }else{
 
-                $href = $img['link'];
+                $dataRel = ' data-rel="lightcase:collection-'.$this->objectCounter.'"';
+
+                $href = $this->systemName.'/public/'.$img['url'];
 
             }
 
             echo '<div class="carousel-item' . $active . '">
-                    <a href="'.$this->systemName.'/public/'.$href.'" title="'.$img['name'].'" data-rel="lightcase:collection-'.$this->objectCounter.'">
+                    <a href="'.$href.'" title="'.$img['name'].'"'.$dataRel.'>
                       <img'.$classField.' src="'.$this->systemName.'/public/' . $img['url'] . '" alt="' . $img['name'] . '">
                     </a>
-                      <div class="carousel-caption d-none d-md-block">
-                        <h5>'.$this->translationMark('im_image-name-'.$img['id'], $img['name']).'</h5>
-                        '.($img['content'] != '' ? '<p>'.$this->translationMark('im_image-name-'.$img['id'], $img['content']).'</p>' : '').'
-                      </div>
-                  </div>';
+                   </div>';
+//                      <div class="carousel-caption d-none d-md-block">
+//                        <h5>'.$this->translationMark('im_image-name-'.$img['id'], $img['name']).'</h5>
+//                        '.($img['content'] != '' ? '<p>'.$this->translationMark('im_image-name-'.$img['id'], $img['content']).'</p>' : '').'
+//                      </div>
+//                  </div>';
 
             $active = '';
 

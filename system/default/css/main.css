@@ -14,7 +14,7 @@ body {
 }
 .im-top ul li {
   list-style-type: none;
-  display: inline;
+  display: inline-block;
 }
 .im-top ul li img {
   height: 30px;
@@ -76,12 +76,31 @@ body {
 .object img {
   width: 100%;
 }
-.object .carousel i {
+.object .carousel a i {
+  font-size: 40px;
+}
+.slider h5 {
   font-size: 40px;
 }
 .slider-icon {
+  width: 100%;
   position: absolute;
-  top: 20px;
-  width: 100px;
+}
+.slider-icon .object {
+  text-align: center;
+  padding: 10px;
+  height: 200px;
+}
+.slider-icon .object img {
+  width: auto;
+}
+.slider-icon .object h5 {
+  font-size: 18px;
+}
+.short {
+  margin-top: 50px;
+}
+.short img {
+  width: auto;
 }
 /*# sourceMappingURL=main.css.map */

@@ -12,11 +12,9 @@ $label = $object->getAllLabel();
 ?>
 <div class="container">
 
-    <?php require_once $this->system.'/content/top.php'; ?>
+    <?php $object->display($sectionId, $label['top']); ?>
 
     <?php //require_once $this->system.'/content/language.php'; ?>
-
-    <?php //require_once $this->system.'/content/logo.php'; ?>
 
 </div>
 
@@ -24,7 +22,11 @@ $label = $object->getAllLabel();
 
     <div class="container">
 
-            <?php $object->display($sectionId, $label['menu']); ?>
+        <?php //require_once $this->system.'/content/logo.php'; ?>
+
+        <?php $object->display($sectionId, $label['logo']); ?>
+
+        <?php $object->display($sectionId, $label['menu']); ?>
 
     </div>
 
@@ -33,6 +35,10 @@ $label = $object->getAllLabel();
 <div class="container-fluid">
 
     <?php $object->display($sectionId, $label['slider-icon']); ?>
+
+</div>
+
+<div class="container-fluid m-0 p-0">
 
     <?php $object->display($sectionId, $label['slider']); ?>
 
@@ -44,9 +50,21 @@ $label = $object->getAllLabel();
 
     <div class="container">
 
-        <?php $object->display($sectionId, $label['sentence']); ?>
+        <?php $object->display($sectionId, $label['sentence-slider-bottom']); ?>
 
     </div>
+
+</div>
+
+<div class="container">
+
+    <?php $object->display($sectionId, $label['category']); ?>
+
+</div>
+
+<div class="container">
+
+    <?php $object->display($sectionId, $label['short']); ?>
 
 </div>
 
@@ -66,4 +84,4 @@ $label = $object->getAllLabel();
 
 <?php //$object->display($sectionId, $label['company-skill'], 'end,pagination:1'); ?>
 
-<?php //require_once $this->system.'/content/footer.php'; ?>
+<?php require_once $this->system.'/content/footer.php'; ?>
