@@ -33,6 +33,9 @@
 .im-gradient-down {
   .linear-gradient-down();
   color: @white;
+  border-bottom: 5px solid @silver;
+  font-size: 17px;
+  padding-top: 25px;
 }
 .im-menu, .im-gradient-down {
   min-height: 90px;
@@ -76,9 +79,20 @@
     font-size: 40px;
   }
 }
-.slider-icon{
-  width: 100%;
+.slider-title, .slider-icon{
   position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+.slider-icon{
+  bottom: 70px;
+  img{
+    background: @black;
+    padding: 20px;
+    border: 2px solid @white;
+    opacity: 0.6;
+    .border-radius(20px);
+  }
   .object{
     text-align: center;
     padding: 10px;
@@ -91,9 +105,19 @@
     }
   }
 }
+.slider-title{
+  top: 30px;
+}
+.main-menu{
+  padding-top: 21px;
+  font-size: 14px;
+}
 .short{
-  margin-top: 50px;
+  margin: 70px 0 70px;
   img{
     width: auto;
   }
+}
+.im-category{
+  background-color: @light;
 }

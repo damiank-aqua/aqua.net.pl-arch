@@ -12,9 +12,17 @@ $label = $object->getAllLabel();
 ?>
 <div class="container">
 
-    <?php $object->display($sectionId, $label['top']); ?>
+<!--    <div class="im-language">-->
+<!--        <div class="row">-->
+<!--            <div class="col-12">-->
+<!--                --><?php
+//                $object->displayLanguage();
+//                ?>
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
-    <?php //require_once $this->system.'/content/language.php'; ?>
+    <?php $object->display($sectionId, $label['top']); ?>
 
 </div>
 
@@ -22,25 +30,21 @@ $label = $object->getAllLabel();
 
     <div class="container">
 
-        <?php //require_once $this->system.'/content/logo.php'; ?>
+        <?php $object->display($sectionId, $label['logo'], 'begin'); ?>
 
-        <?php $object->display($sectionId, $label['logo']); ?>
-
-        <?php $object->display($sectionId, $label['menu']); ?>
+        <?php $object->display($sectionId, $label['main-menu'], 'end,submenu'); ?>
 
     </div>
 
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid m-0 p-0 text-shadow">
 
-    <?php $object->display($sectionId, $label['slider-icon']); ?>
-
-</div>
-
-<div class="container-fluid m-0 p-0">
+    <?php $object->display($sectionId, $label['slider-title']); ?>
 
     <?php $object->display($sectionId, $label['slider']); ?>
+
+    <?php $object->display($sectionId, $label['slider-icon']); ?>
 
 </div>
 
@@ -56,9 +60,13 @@ $label = $object->getAllLabel();
 
 </div>
 
-<div class="container">
+<div class="im-category">
 
-    <?php $object->display($sectionId, $label['category']); ?>
+    <div class="container">
+
+        <?php $object->display($sectionId, $label['category']); ?>
+
+    </div>
 
 </div>
 
@@ -66,6 +74,14 @@ $label = $object->getAllLabel();
 
     <?php $object->display($sectionId, $label['short']); ?>
 
+</div>
+
+<div class="im-footer">
+    <div class="row">
+        <div class="col-12">
+
+        </div>
+    </div>
 </div>
 
 <?php
@@ -83,5 +99,3 @@ $label = $object->getAllLabel();
 <?php //$object->display($sectionId, $label['news'], 'begin'); ?>
 
 <?php //$object->display($sectionId, $label['company-skill'], 'end,pagination:1'); ?>
-
-<?php require_once $this->system.'/content/footer.php'; ?>
