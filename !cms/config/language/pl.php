@@ -47,14 +47,15 @@ $translation = array(
         'image' => 'Obrazy',
         'file' => 'Pliki',
         'movie' => 'Filmy',
-        'setting' => 'Ustawienia'
+        'setting' => 'Ustawienia',
+        'label-property' => 'Właściwości etykiet'
     ),
-    'table' => array('event' => 'Działania', 'sort' => 'tryb sortowania'),
+    'table' => array('event' => 'Działania', 'sort' => 'tryb sortowania', 'all' => 'wszystkie'),
     'edit' => array(
         'name' => 'Pole nazwy',
         'system_name' => 'Pole nazwa systemowa',
-        'class' => 'Pole zewnętrzne do nadawania właściwości poprzez klasę Bootstrap (nie jest wymagane, zaawansowane)',
-        'class_field' => 'Pole wewnętrzne do nadawania właściwości poprzez klasę Bootstrap (nie jest wymagane, zaawansowane)',
+        'class' => 'Pole do nadawania właściwości poprzez klasę Bootstrap (zaawansowane)',
+        'class_field' => 'Pole wewnętrzne do nadawania właściwości poprzez klasę Bootstrap (zaawansowane)',
         'description' => 'Pole widoczne tylko dla administratora (nie jest wymagane)',
         'link' => 'Pole na odsyłacz zewnętrzny (otwarcie w nowym oknie)',
         'date' => 'Pole data w dowolnym formacie',
@@ -210,6 +211,15 @@ $tableDefinition = array(
         'description' => 'Opis techniczny',
         'date_create' => 'Utworzony',
         'date_modify' => 'Zmodyfikowany'
+    ),
+    'im_label_section' => array(
+        'label' => 'Nazwa etykiety',
+        'system_name' => 'Nazwa systemowa',
+        'name' => 'Zastosowanie w sekcji',
+        'class' => 'Właściwości',
+        'description' => 'Opis techniczny',
+        'date_create' => 'Utworzony',
+        'date_modify' => 'Zmodyfikowany'
     )
 );
 $tableDefinitionEvent = array(
@@ -299,6 +309,13 @@ $tableDefinitionEvent = array(
     'im_label' => array(
         'name' => 'Nazwa',
         'system_name' => 'Nazwa systemowa',
+        'description' => 'Opis techniczny'
+    ),
+    'im_label_section' => array(
+        'name' => 'Zastosowanie w sekcji',
+        'name_event' => 'Zastosowanie w sekcji (gdy nie wybierzesz nic ustawienie zostanie nadane dla wszystkich sekcji)',
+        'label' => 'Etykieta',
+        'class' => 'Właściwości',
         'description' => 'Opis techniczny'
     )
 );

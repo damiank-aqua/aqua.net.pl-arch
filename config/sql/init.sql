@@ -44,7 +44,7 @@ drop table if exists im_translation_system;
 
 drop table if exists im_translation;
 
-drop table if exists im_section_label;
+drop table if exists im_label_section;
 
 drop table if exists im_movie;
 
@@ -135,6 +135,12 @@ drop trigger if exists im_type_property_insert_date_create;
 drop trigger if exists im_type_property_insert_date_modify;
 
 drop trigger if exists im_type_property_update_date_modify;
+
+drop trigger if exists im_label_section_insert_date_create;
+
+drop trigger if exists im_label_section_insert_date_modify;
+
+drop trigger if exists im_label_section_update_date_modify;
 
 -- end prepare database --
 
@@ -382,13 +388,34 @@ create trigger im_type_property_update_date_modify
 
 -- not to connect, only for adding special class for section label
 
-create table im_section_label (
-    section_label_id int not null auto_increment,
-    section int not null,
-    label varchar(128) collate utf8_polish_ci default '',
-    class varchar(128) collate utf8_polish_ci default '',-- class of kind of object fields
-    primary key (section_label_id)
+create table im_label_section (
+    label_section_id int not null auto_increment,
+    label_id int not null,
+    section int not null,-- section id, but it is not key (relationship)
+    class varchar(256) collate utf8_polish_ci default '',-- class of kind of object fields
+    description text collate utf8_polish_ci default '',-- description, management
+    date_create datetime,-- create time
+    date_modify datetime,-- last modification time
+    primary key (label_section_id),
+    foreign key (label_id) references im_label(label_id)
 ) engine = InnoDB;
+
+-- trigger
+
+create trigger im_label_section_insert_date_create
+    before insert on im_label_section
+    for each row
+    set new.date_create = now();
+
+create trigger im_label_section_insert_date_modify
+    before insert on im_label_section
+    for each row
+    set new.date_modify = now();
+
+create trigger im_label_section_update_date_modify
+    before update on im_label_section
+    for each row
+    set new.date_modify = now();
 
 -- SECTION-LABEL END --
 
