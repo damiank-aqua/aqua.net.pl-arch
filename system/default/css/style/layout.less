@@ -8,8 +8,10 @@
     li{
       list-style-type: none;
       display: inline-block;
+      padding: 11px 3px 0px;
       img{
         height: 30px;
+        margin-bottom: 7px;
       }
       a{
         color: @secondary;
@@ -42,7 +44,10 @@
 }
 .im-footer{
   background-color: @black;
-  min-height: 300px;
+  padding: 20px 0 20px;
+  a{
+    color: @info;
+  }
 }
 .im-language{
   ul{
@@ -120,4 +125,11 @@
 }
 .im-category{
   background-color: @light;
+  .object{
+    p:last-child{
+      padding: 0 10px 0;
+      line-height: 24px;
+      color: @secondary;
+    }
+  }
 }

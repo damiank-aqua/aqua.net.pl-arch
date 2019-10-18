@@ -77,11 +77,19 @@ $label = $object->getAllLabel();
 </div>
 
 <div class="im-footer">
-    <div class="row">
-        <div class="col-12">
 
-        </div>
+    <div class="container">
+
+        <?php $object->display($sectionId, $label['footer']); ?>
+
     </div>
+
+</div>
+
+<div class="container">
+
+    <?php $object->display($sectionId, $label['copyright']); ?>
+
 </div>
 
 <?php
