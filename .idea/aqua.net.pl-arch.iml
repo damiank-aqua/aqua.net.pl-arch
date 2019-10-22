@@ -7,8 +7,8 @@
       <excludeFolder url="file://$MODULE_DIR$/app/composer/vendor/datatables/datatables" />
       <excludeFolder url="file://$MODULE_DIR$/app/composer/vendor/filp/whoops" />
       <excludeFolder url="file://$MODULE_DIR$/app/composer/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/app/composer/vendor/tinymce/tinymce" />
       <excludeFolder url="file://$MODULE_DIR$/app/composer/vendor/twbs/bootstrap" />
-      <excludeFolder url="file://$MODULE_DIR$/app/composer/vendor/xdan/jodit" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
