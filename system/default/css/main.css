@@ -47,11 +47,32 @@ li {
   background: linear-gradient(180deg, #38a0e2 0%, #79c3f2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#38a0e2", endColorstr="#79c3f2", GradientType=1);
 }
-.im-menu .nav-link {
+.im-menu .nav-item {
+  padding: 0 10px 0;
+}
+.im-menu .nav-item .nav-link {
   color: #fff !important;
 }
-.im-menu .nav-link i.fal {
+.im-menu .nav-item .nav-link i.fal {
+  font-size: 19px;
+}
+.im-menu .dropdown-menu {
+  background-color: #fbfbfb;
+}
+.im-menu .dropdown-menu .dropdown-item {
+  padding: 6px;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+.im-menu .dropdown-menu .dropdown-item i.fad {
+  color: #17a2b8;
   font-size: 17px;
+}
+.im-menu .dropdown-menu .dropdown-item:hover {
+  background-color: #f2f2f2;
+}
+.im-menu .dropdown-menu .dropdown-item:last-child {
+  border: none;
 }
 .im-gradient-down {
   background: #79c3f2;
@@ -147,9 +168,31 @@ li {
 .im-category {
   background-color: #f2f4f6;
 }
+.im-category .object {
+  cursor: pointer;
+  text-align: center;
+  line-height: 26px;
+  min-height: 405px;
+}
+.im-category .object a {
+  width: 100%;
+  margin: 1px 0 1px;
+}
+.im-category .object img {
+  width: 100%;
+}
 .im-category .object p:last-child {
   padding: 0 10px 0;
-  line-height: 24px;
   color: #6c757d;
+}
+.im-category .object .back .back-content {
+  padding: 0 15px 0;
+}
+.im-category .object .back .back-content ul li {
+  margin: 1px;
+}
+.im-category .object .back .back-content ul li a {
+  border-bottom-width: 2px;
+  font-size: 12px;
 }
 /*# sourceMappingURL=main.css.map */
