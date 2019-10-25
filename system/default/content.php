@@ -60,6 +60,18 @@ $label = $object->getAllLabel();
 
 </div>
 
+<div class="im-content">
+
+    <div class="container">
+
+        <?php $object->display($sectionId, $label['content'], 'begin'); ?>
+
+        <?php $object->display($sectionId, $label['department'], 'end'); ?>
+
+    </div>
+
+</div>
+
 <div class="im-category">
 
     <div class="container">

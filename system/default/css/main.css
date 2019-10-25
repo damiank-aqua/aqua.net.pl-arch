@@ -16,6 +16,14 @@ li {
 .im-active img {
   background-color: #333;
 }
+.col-1-5 {
+  width: 20%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
 .container,
 .container-fluid {
   position: relative;
@@ -194,5 +202,8 @@ li {
 .im-category .object .back .back-content ul li a {
   border-bottom-width: 2px;
   font-size: 12px;
+}
+.sentence-slider-bottom {
+  font-size: 20px;
 }
 /*# sourceMappingURL=main.css.map */
