@@ -68,7 +68,7 @@ li {
   background-color: #fbfbfb;
 }
 .im-menu .dropdown-menu .dropdown-item {
-  padding: 6px;
+  padding: 9px;
   border-bottom: 1px solid #ddd;
   font-size: 14px;
 }
@@ -205,5 +205,17 @@ li {
 }
 .sentence-slider-bottom {
   font-size: 20px;
+}
+.object-category {
+  float: right;
+  margin-top: 5px;
+}
+.content,
+.content-job {
+  padding: 0 50px 0;
+}
+.content .object,
+.content-job .object {
+  margin-bottom: 10px;
 }
 /*# sourceMappingURL=main.css.map */

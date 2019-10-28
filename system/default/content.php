@@ -66,7 +66,11 @@ $label = $object->getAllLabel();
 
         <?php $object->display($sectionId, $label['content'], 'begin'); ?>
 
+        <?php $object->display($sectionId, $label['content-job']); ?>
+
         <?php $object->display($sectionId, $label['department'], 'end'); ?>
+
+        <?php $object->display($sectionId, $label['content-end']); ?>
 
     </div>
 
