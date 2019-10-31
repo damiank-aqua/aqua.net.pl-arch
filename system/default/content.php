@@ -64,6 +64,8 @@ $label = $object->getAllLabel();
 
     <div class="container">
 
+        <?php $object->display($sectionId, $label['content-begin']); ?>
+
         <?php $object->display($sectionId, $label['content'], 'begin'); ?>
 
         <?php $object->display($sectionId, $label['content-job']); ?>
