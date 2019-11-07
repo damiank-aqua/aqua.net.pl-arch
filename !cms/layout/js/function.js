@@ -385,7 +385,7 @@ function scrollEvent() {
 
     $window.scroll(function() {
 
-        if($window.scrollTop() > 90){
+        if($window.scrollTop() > 300){
 
             $('#content-top').addClass('position-fixed');
 
