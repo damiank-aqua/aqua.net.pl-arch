@@ -118,15 +118,21 @@ li {
   margin: 5px;
   cursor: pointer;
 }
-.object {
+.objects .object {
   padding: 0;
   margin: 0;
+  line-height: 24px;
 }
-.object img {
+.objects .object img {
   width: 100%;
 }
-.object .carousel a i {
+.objects .object .carousel a i {
   font-size: 40px;
+}
+.objects .object .list-3 li,
+.objects .object .im-ul li {
+  list-style-type: disc;
+  margin-left: 18px;
 }
 .slider h5 {
   font-size: 40px;
@@ -217,5 +223,8 @@ li {
 .content .object,
 .content-job .object {
   margin-bottom: 10px;
+}
+.department {
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */
