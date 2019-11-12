@@ -49,6 +49,23 @@ if(isset($eventData) and is_array($eventData) and count($eventData) > 0) {
                 if($field['type'] == 'text')
                     echo '<input type="text" name="form_'.$i.'" class="form-control'.$require.'" id="'.$i.'" placeholder="'.$translation['edit'][$i].'" value="'.$editDataOne.'"'.$readonly.'>';
 
+                if($field['type'] == 'icon') {
+
+                    if($editDataOne != '')
+                        echo ': <i class="'.$editDataOne.'"></i>';
+
+                    echo '<input type="text" name="form_' . $i . '" class="form-control' . $require . '" id="' . $i . '" placeholder="' . $translation['edit'][$i] . '" value="' . $editDataOne . '"' . $readonly . '>';
+
+                }
+
+                if($field['type'] == 'preview') {
+
+                    echo '<div>'.$editDataOne.'</div>';
+
+                    echo '<input type="hidden" name="form_' . $i . '" id="' . $i . '" value="' . $editDataOne . '">';
+
+                }
+
                 if(stristr($field['type'], 'textarea')) {
 
                     $editorDisplayNow = '';
@@ -59,7 +76,7 @@ if(isset($eventData) and is_array($eventData) and count($eventData) > 0) {
                         $editorDisplay = true;
                     }
 
-                    echo '<textarea name="form_' . $i . '" class="form-control'.$require.$editorDisplayNow. '" rows="3" id="' . $i . '" placeholder="' . $translation['edit'][$i] . '">' . $editDataOne . '</textarea>';
+                    echo '<textarea name="form_' . $i . '" class="form-control'.$require.$editorDisplayNow. '" rows="3" id="' . $i . '" placeholder="' . $translation['edit'][$i] . '"'.$readonly.'>' . $editDataOne . '</textarea>';
 
 
                 }

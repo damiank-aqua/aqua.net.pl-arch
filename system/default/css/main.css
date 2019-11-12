@@ -95,7 +95,7 @@ li {
 }
 .im-menu,
 .im-gradient-down {
-  min-height: 90px;
+  height: 90px;
 }
 .im-footer {
   background-color: #333;
@@ -213,18 +213,32 @@ li {
   font-size: 20px;
 }
 .object-category {
+  margin: 5px 0 20px;
+}
+.content-job .object-category {
   float: right;
-  margin-top: 5px;
 }
 .content,
-.content-job {
+.content-job,
+.content-supplier {
   padding: 0 50px 0;
 }
 .content .object,
-.content-job .object {
+.content-job .object,
+.content-supplier .object {
   margin-bottom: 10px;
+}
+.content-supplier img {
+  height: 50px;
 }
 .department {
   text-align: center;
+  background-color: #dce6f0;
+  padding: 25px !important;
+  margin: 10px 0 10px;
+  color: #6c757d;
+}
+.department a {
+  color: #17a2b8;
 }
 /*# sourceMappingURL=main.css.map */

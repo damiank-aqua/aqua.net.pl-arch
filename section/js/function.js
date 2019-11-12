@@ -237,7 +237,7 @@ function scrollEvent() {
 
     $window.scroll(function() {
 
-        if($window.scrollTop() > 200){
+        if($window.scrollTop() > 300){
 
             $('#scroll-top').fadeIn();
 
@@ -254,6 +254,21 @@ function scrollEvent() {
         $('html').animate({scrollTop: '0'}, 1000);
 
     });
+
+}
+function editor() {
+
+    if($('.editor').length > 0) {
+
+        tinymce.init({
+            selector: '.editor',
+            height: 300,
+            menubar: false,
+            plugins: "emoticons lists",
+            toolbar: 'undo redo | fontsizeselect | bold italic underline strikethrough superscript subscript forecolor backcolor bullist | alignleft aligncenter alignright alignjustify | emoticons'
+        });
+
+    }
 
 }
 function niceSelect() {

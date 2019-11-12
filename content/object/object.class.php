@@ -81,7 +81,17 @@ class ObjectContent extends Language {
         }
 
         //Name of aliases need to be the same as system_name of property fixed to type of object
-        $sql = 'select o.object_id as id, o.name as name, o.date as date, o.type_id as type, o.content as content, o.section as section, o.link as link, o.email as email';
+        $sql = 'select 
+            o.object_id as id, 
+            o.name as name, 
+            o.date as date, 
+            o.type_id as type, 
+            o.content as content, 
+            o.section as section, 
+            o.link as link, 
+            o.email as email,
+            o.form as form, 
+            o.icon as icon';
 
         //Field from joining tables
         //if($isParameter) {}
@@ -193,7 +203,7 @@ class ObjectContent extends Language {
 
                         echo '<div'.$class.'>';
 
-                        require $path;
+                            require $path;
 
                         echo '</div>';
 
@@ -551,13 +561,13 @@ class ObjectContent extends Language {
 
     }
 
-    private function getToolUrl($object) {
+    private function getToolUrl($toolUrlRest) {
 
         if(stristr($this->systemName, 'system/')) {
 
             $systemUrl = str_replace('system/', '', $this->systemName);
 
-            $toolUrl = '!cms/' . $systemUrl . ',object,' . $object['type'] . ',edit,' . $object['id'] . ',' . $this->getSectionUrl($object['section']);
+            $toolUrl = '!cms/' . $systemUrl . ','.$toolUrlRest;
 
             return $toolUrl;
 
@@ -659,8 +669,21 @@ class ObjectContent extends Language {
 
                             echo '<div class="'.$this->getCategoryObject($or['id']).$class.'">';
 
-                            if($this->admin)
-                                echo '<div class="edit-tool"><a href="'.$this->getToolUrl(array('id' => $or['id'], 'type' => $or['type'], 'section' => $section)).'">'.$this->icon['tool']['edit'].'</a></div>';
+                            if($this->admin) {
+
+                                //Many different methods to get from object to cms section
+
+                                echo '<div class="edit-tool">';
+
+                                    echo '<a href="' . $this->getToolUrl('object,'.$or['type'].',edit,'.$or['id'].','.$this->getSectionUrl($section)) . '">' . $this->icon['tool']['edit'] . '</a>';
+
+                                    //echo '<a href="' . $this->getToolUrl('type-property,'.$or['type'].','.$this->getSectionUrl($section)) . '">' . $this->icon['tool']['edit'] . '</a>';
+
+                                    //echo '<a href="' . $this->getToolUrl('label,edit,'.$or['id'].','.$this->getSectionUrl($section)) . '">' . $this->icon['tool']['edit'] . '</a>';
+
+                                echo '</div>';
+
+                            }
 
                             $property = $this->getPropertyFromType($or['type']);
 
@@ -774,6 +797,52 @@ class ObjectContent extends Language {
                     echo '</div>';
 
                 echo '</div>';
+
+            }
+
+        }
+
+    }
+
+    public function displayStatic($sectionId) {
+
+        if(is_dir($this->systemName.'/static')) {
+
+            $files = scandir($this->systemName.'/static');
+
+            $fileStatic = false;
+            if(count($files) > 2) {
+
+                $sectionName = $this->getSectionUrl($sectionId);
+
+                foreach ($files as $f) {
+
+                    if ($f == '.' or $f == '..')
+                        continue;
+
+                    if(stristr($f, $sectionName)) {
+
+                        $fileStatic = $this->systemName.'/static/'.$f;
+
+                        break;
+
+                    }
+
+                }
+
+            }
+
+            if($fileStatic) {
+
+                if(stristr($fileStatic, '.php')) {
+
+                    require_once $fileStatic;
+
+                }else{
+
+                    echo file_get_contents($fileStatic);
+
+                }
 
             }
 

@@ -61,7 +61,7 @@
   padding-top: 25px;
 }
 .im-menu, .im-gradient-down {
-  min-height: 90px;
+  height: 90px;
 }
 .im-footer{
   background-color: @black;
@@ -189,15 +189,29 @@
   font-size: 20px;
 }
 .object-category {
-  float: right;
-  margin-top: 5px;
+  margin: 5px 0 20px;
 }
-.content, .content-job{
+.content-job .object-category {
+  float: right;
+}
+.content, .content-job, .content-supplier{
   padding: 0 50px 0;
   .object{
     margin-bottom: 10px;
   }
 }
+.content-supplier {
+  img{
+    height: 50px;
+  }
+}
 .department{
   text-align: center;
+  background-color: #dce6f0;
+  padding: 25px !important;
+  margin: 10px 0 10px;
+  color: @secondary;
+  a{
+    color: @info;
+  }
 }
