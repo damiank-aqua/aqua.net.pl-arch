@@ -13,9 +13,9 @@ require_once 'php/script/one-data-display.php';
 $sql = 'select 
         form_id,
         name,
-        receive,
         content,
-        status,
+        source,
+        destination,
         if(description = \'\', \'-\', description) as description,
         date_create
         from ' . $table;
@@ -56,7 +56,8 @@ if ($record) {
         $tableData = array(
             'table' => $tableDefinition[$table],
             'record' => $record,
-            'event' => 'edit:preview',
+            'event' => 'edit:preview,delete',
+            'table_delete' => array('main' => $table),
             'url' => $baseUrl,
             'no-last' => true
         );

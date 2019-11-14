@@ -5,15 +5,15 @@ $s_permittedImage = 'jpg,jpeg,png,gif';
 $s_previewImage = '200px';
 //Dashboard definitions, there should be 6, 9, 12...elements (max: col-md-4), direct to edit
 $s_dashboard = array(
-    array('name' => $translation['dashboard']['section'], 'icon' => $icon['menu']['section'], 'table' => 'im_section', 'title' => 'name', 'field' => 'parent'),
-    array('name' => $translation['dashboard']['object'], 'icon' => $icon['menu']['object'], 'table' => 'im_object', 'title' => 'system_name as name', 'field' => 'type_id'),
-    array('name' => $translation['dashboard']['setting'], 'icon' => $icon['menu']['setting'], 'table' => 'im_setting', 'title' => 'name'),
-    array('name' => $translation['dashboard']['category'], 'icon' => $icon['menu']['category'], 'table' => 'im_category', 'title' => 'name', 'field' => 'label_id'),
-    array('name' => $translation['dashboard']['type'], 'icon' => $icon['menu']['type'], 'table' => 'im_type', 'title' => 'name'),
-    array('name' => $translation['dashboard']['label'], 'icon' => $icon['menu']['label'], 'table' => 'im_label', 'title' => 'name'),
-    array('name' => $translation['dashboard']['image'], 'icon' => $icon['menu']['image'], 'table' => 'im_image', 'title' => 'name'),
-    array('name' => $translation['dashboard']['file'], 'icon' => $icon['menu']['file'], 'table' => 'im_file', 'title' => 'name'),
-    array('name' => $translation['dashboard']['movie'], 'icon' => $icon['menu']['movie'], 'table' => 'im_movie', 'title' => 'name')
+    array('name' => $translation['dashboard']['section'], 'icon' => $icon['menu']['section'], 'table' => 'im_section', 'title' => 'name, description', 'field' => 'parent'),
+    array('name' => $translation['dashboard']['object'], 'icon' => $icon['menu']['object'], 'table' => 'im_object', 'title' => 'system_name as name, description', 'field' => 'type_id'),
+    array('name' => $translation['dashboard']['setting'], 'icon' => $icon['menu']['setting'], 'table' => 'im_setting', 'title' => 'name, description'),
+    array('name' => $translation['dashboard']['category'], 'icon' => $icon['menu']['category'], 'table' => 'im_category', 'title' => 'name, description', 'field' => 'label_id'),
+    array('name' => $translation['dashboard']['type'], 'icon' => $icon['menu']['type'], 'table' => 'im_type', 'title' => 'name, description'),
+    array('name' => $translation['dashboard']['label'], 'icon' => $icon['menu']['label'], 'table' => 'im_label', 'title' => 'name, description'),
+    array('name' => $translation['dashboard']['image'], 'icon' => $icon['menu']['image'], 'table' => 'im_image', 'title' => 'name, description'),
+    array('name' => $translation['dashboard']['file'], 'icon' => $icon['menu']['file'], 'table' => 'im_file', 'title' => 'name, description'),
+    array('name' => $translation['dashboard']['movie'], 'icon' => $icon['menu']['movie'], 'table' => 'im_movie', 'title' => 'name, description')
 );
 //In what table can be translate in other languages
 $s_translationTable = array('im_object', 'im_section', 'im_category', 'im_image', 'im_file', 'im_movie');
@@ -152,7 +152,8 @@ $s_eventDefinition = array(
         ),
         'im_form' => array(
             'name' => array('name' => $tableDefinitionEvent['im_form']['name'], 'type' => 'text', 'require' => 'validation :text', 'readonly' => true, 'table' => 'im_form'),
-            'receive' => array('name' => $tableDefinitionEvent['im_form']['receive'], 'type' => 'text', 'require' => 'validation :text', 'readonly' => true, 'table' => 'im_form'),
+            'source' => array('name' => $tableDefinitionEvent['im_form']['source'], 'type' => 'text', 'require' => 'validation :text', 'readonly' => true, 'table' => 'im_form'),
+            'destination' => array('name' => $tableDefinitionEvent['im_form']['destination'], 'type' => 'text', 'require' => 'validation :text', 'readonly' => true, 'table' => 'im_form'),
             'content' => array('name' => $tableDefinitionEvent['im_form']['content'], 'type' => 'preview', 'table' => 'im_form'),
             'description' => array('name' => $tableDefinitionEvent['im_form']['description'], 'type' => 'textarea', 'table' => 'im_form')
         )
