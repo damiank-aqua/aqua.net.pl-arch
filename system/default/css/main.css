@@ -215,7 +215,7 @@ li {
 .object-category {
   margin: 5px 0 20px;
 }
-.content-job .object-category {
+.object-category {
   float: right;
 }
 .content,
@@ -228,8 +228,13 @@ li {
 .content-supplier .object {
   margin-bottom: 10px;
 }
+.content-supplier li {
+  border: none;
+}
 .content-supplier img {
-  height: 50px;
+  max-width: 150px;
+  margin-top: 5px;
+  border: 1px solid #eee;
 }
 .department {
   text-align: center;
