@@ -232,7 +232,7 @@ li {
   border: none;
 }
 .content-supplier img {
-  max-width: 150px;
+  height: 50px;
   margin-top: 5px;
   border: 1px solid #eee;
 }

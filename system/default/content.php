@@ -70,7 +70,7 @@ $label = $object->getAllLabel();
 
         <?php $object->display($sectionId, $label['content-job'], 'begin'); ?>
 
-        <?php $object->display($sectionId, $label['content-supplier'], 'begin,pagination:10'); ?>
+        <?php $object->display($sectionId, $label['content-supplier'], 'begin,pagination:8'); ?>
 
         <?php $object->display($sectionId, $label['department'], 'end'); ?>
 
