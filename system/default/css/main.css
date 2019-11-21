@@ -13,6 +13,10 @@ li {
 li {
   list-style-type: none;
 }
+.border-down {
+  border-bottom: 1px dashed #ddd !important;
+  padding-bottom: 60px !important;
+}
 .im-active img {
   background-color: #333;
 }

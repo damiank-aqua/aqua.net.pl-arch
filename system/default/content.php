@@ -68,6 +68,8 @@ $label = $object->getAllLabel();
 
         <?php $object->display($sectionId, $label['content'], 'begin'); ?>
 
+        <?php $object->display($sectionId, $label['content-news'], 'begin,pagination:5'); ?>
+
         <?php $object->display($sectionId, $label['content-job'], 'begin'); ?>
 
         <?php $object->display($sectionId, $label['content-supplier'], 'begin,pagination:8'); ?>
