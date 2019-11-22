@@ -72,13 +72,15 @@ $label = $object->getAllLabel();
 
         <?php $object->display($sectionId, $label['content-job'], 'begin'); ?>
 
+        <?php $object->display($sectionId, $label['content-faq'], 'begin,pagination:10'); ?>
+
         <?php $object->display($sectionId, $label['content-supplier'], 'begin,pagination:8'); ?>
 
         <?php $object->display($sectionId, $label['department'], 'end'); ?>
 
-        <?php $object->displayStatic($sectionId); ?>
-
         <?php $object->display($sectionId, $label['content-end']); ?>
+
+        <?php $object->displayStatic($sectionId); ?>
 
     </div>
 
