@@ -104,6 +104,7 @@ li {
 .im-footer {
   background-color: #333;
   padding: 20px 0 20px;
+  margin-top: 30px;
 }
 .im-footer a {
   color: #17a2b8;
@@ -224,13 +225,64 @@ li {
 }
 .content,
 .content-job,
-.content-supplier {
+.content-supplier,
+.content-news,
+.content-faq {
   padding: 0 50px 0;
 }
 .content .object,
 .content-job .object,
-.content-supplier .object {
+.content-supplier .object,
+.content-news .object,
+.content-faq .object {
   margin-bottom: 10px;
+}
+.content .im-move,
+.content-job .im-move,
+.content-supplier .im-move,
+.content-news .im-move,
+.content-faq .im-move {
+  position: fixed;
+  top: 45%;
+  z-index: 10;
+  font-size: 100px;
+  height: 5%;
+  opacity: 0.5;
+}
+.content #im-left,
+.content-job #im-left,
+.content-supplier #im-left,
+.content-news #im-left,
+.content-faq #im-left {
+  left: 10%;
+}
+.content #im-right,
+.content-job #im-right,
+.content-supplier #im-right,
+.content-news #im-right,
+.content-faq #im-right {
+  right: 10%;
+}
+.form {
+  padding: 10px;
+}
+.form input.form-control {
+  margin: 1px 0 1px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.form img {
+  border: 1px solid #ced4da;
+}
+.form .btn {
+  margin-left: 1px;
+  padding: 13px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: 1px solid #ced4da;
+  background: none;
 }
 .content-supplier li {
   border: none;

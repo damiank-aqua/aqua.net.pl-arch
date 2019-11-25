@@ -18,4 +18,10 @@ $(function(){
 
     });
 
+    if($('.im-move').length > 0) {
+
+        $('.im-content').css('min-height', '550px');
+
+    }
+
 });

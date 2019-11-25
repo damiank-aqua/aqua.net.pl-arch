@@ -66,6 +66,7 @@
 .im-footer{
   background-color: @black;
   padding: 20px 0 20px;
+  margin-top: 30px;
   a{
     color: @info;
   }
@@ -194,10 +195,41 @@
 .object-category {
   float: right;
 }
-.content, .content-job, .content-supplier{
+.content, .content-job, .content-supplier, .content-news, .content-faq{
   padding: 0 50px 0;
   .object{
     margin-bottom: 10px;
+  }
+  .im-move{
+    position: fixed;
+    top: 45%;
+    z-index: 10;
+    font-size: 100px;
+    height: 5%;
+    opacity: 0.5;
+  }
+  #im-left{
+    left: 10%;
+  }
+  #im-right{
+    right: 10%;
+  }
+}
+.form {
+  padding: 10px;
+  input.form-control {
+    margin: 1px 0 1px;
+    .border-radius(0);
+  }
+  img{
+    border: 1px solid @border-color;
+  }
+  .btn{
+    margin-left: 1px;
+    padding: 13px;
+    .border-radius(0);
+    border: 1px solid @border-color;
+    background: none;
   }
 }
 .content-supplier {
