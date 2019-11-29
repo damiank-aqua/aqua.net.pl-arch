@@ -17,6 +17,10 @@ li {
   border-bottom: 1px dashed #ddd !important;
   padding-bottom: 60px !important;
 }
+ul.list {
+  max-height: 400px;
+  overflow: auto !important;
+}
 .im-active img {
   background-color: #333;
 }
@@ -52,6 +56,9 @@ li {
   text-align: center;
   padding: 5px;
 }
+.logo img {
+  width: auto !important;
+}
 .im-menu {
   background: #38a0e2;
   background: -moz-linear-gradient(180deg, #38a0e2 0%, #79c3f2 100%);
@@ -60,13 +67,21 @@ li {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#38a0e2", endColorstr="#79c3f2", GradientType=1);
 }
 .im-menu .nav-item {
-  padding: 0 10px 0;
+  padding: 0 5px 0;
 }
 .im-menu .nav-item .nav-link {
   color: #fff !important;
 }
 .im-menu .nav-item .nav-link i.fal {
   font-size: 19px;
+}
+.im-menu button {
+  padding: 5px 10px 5px;
+  background-color: #333;
+  opacity: 0.6;
+}
+.im-menu button i {
+  color: #fff;
 }
 .im-menu .dropdown-menu {
   background-color: #fbfbfb;
@@ -99,7 +114,7 @@ li {
 }
 .im-menu,
 .im-gradient-down {
-  height: 90px;
+  min-height: 90px;
 }
 .im-footer {
   background-color: #333;
@@ -148,6 +163,10 @@ li {
   z-index: 1;
   width: 100%;
 }
+.slider-title .no-data,
+.slider-icon .no-data {
+  display: none !important;
+}
 .slider-icon {
   bottom: 70px;
 }
@@ -177,6 +196,11 @@ li {
 .main-menu {
   padding-top: 21px;
   font-size: 14px;
+}
+.main-menu button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
 }
 .short {
   margin: 70px 0 70px;
@@ -301,5 +325,36 @@ li {
 }
 .department a {
   color: #17a2b8;
+}
+@media (max-width: 991px) {
+  .main-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    opacity: 0.85;
+    z-index: 3;
+    padding-top: 0;
+  }
+  .main-menu div {
+    padding: 0;
+    margin: 0;
+  }
+  .im-footer {
+    text-align: center !important;
+  }
+  .im-footer p,
+  .im-footer ul,
+  .im-footer li {
+    text-align: center !important;
+  }
+  .im-footer li em {
+    display: none;
+  }
+  .content-supplier img {
+    height: auto;
+    width: 180px !important;
+  }
 }
 /*# sourceMappingURL=main.css.map */

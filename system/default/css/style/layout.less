@@ -23,15 +23,28 @@
   text-align: center;
   padding: 5px;
 }
+.logo{
+  img{
+    width: auto !important;
+  }
+}
 .im-menu{
   .linear-gradient-up();
   .nav-item {
-    padding: 0 10px 0;
+    padding: 0 5px 0;
     .nav-link {
       color: @white !important;
       i.fal {
         font-size: 19px;
       }
+    }
+  }
+  button{
+    padding: 5px 10px 5px;
+    background-color: @black;
+    opacity: 0.6;
+    i{
+      color: @white;
     }
   }
   .dropdown-menu{
@@ -61,7 +74,7 @@
   padding-top: 25px;
 }
 .im-menu, .im-gradient-down {
-  height: 90px;
+  min-height: 90px;
 }
 .im-footer{
   background-color: @black;
@@ -117,6 +130,9 @@
   position: absolute;
   z-index: 1;
   width: 100%;
+  .no-data{
+    display: none !important;
+  }
 }
 .slider-icon{
   bottom: 70px;
@@ -145,6 +161,11 @@
 .main-menu{
   padding-top: 21px;
   font-size: 14px;
+  button{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
 }
 .short{
   margin: 70px 0 70px;

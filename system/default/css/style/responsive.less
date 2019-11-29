@@ -1,1 +1,36 @@
 //col < 576px, col-sm >= 576px, col-md >= 768px, col-lg >= 992px, col-xl >= 1200px
+@media (max-width: 991px) {
+
+  .main-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: @black;
+    opacity: 0.85;
+    z-index: 3;
+    padding-top: 0;
+    div{
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .im-footer{
+    text-align: center !important;
+    p, ul, li{
+      text-align: center !important;
+    }
+    li{
+      em{
+        display: none;
+      }
+    }
+  }
+  .content-supplier{
+    img{
+      height: auto;
+      width: 180px !important;
+    }
+  }
+
+}
