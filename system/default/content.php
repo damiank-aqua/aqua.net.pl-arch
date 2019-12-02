@@ -90,7 +90,7 @@ $label = $object->getAllLabel();
 
     <div class="container">
 
-        <?php $object->display($sectionId, $label['category']); ?>
+        <?php $object->display($sectionId, $label['category'], 'scroll'); ?>
 
     </div>
 
@@ -106,7 +106,7 @@ $label = $object->getAllLabel();
 
     <div class="container">
 
-        <?php $object->display($sectionId, $label['footer']); ?>
+        <?php $object->display($sectionId, $label['footer'], 'scroll'); ?>
 
     </div>
 
